@@ -1,0 +1,167 @@
+@font-face {
+  font-family: Inter;
+  src: url(Inter-VariableFont_slnt,wght.ttf);
+}
+
+body {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+.icon {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 22px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align: -25%;
+}
+
+
+a {
+  color: #545b7c;
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+hr {
+  margin: 1em auto;
+  height: 0;
+  border: 0;
+  border-top: 1px dashed #aaa;
+}
+
+
+main {
+  padding: 0 15px 0;
+}
+
+header {
+  background: #f0f0f0;
+  padding: 40px 15px 30px;
+  margin-bottom: 50px;
+}
+header h1 {
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 50px;
+}
+
+
+.books,
+footer > *,
+header > * {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+footer {
+  padding: 60px 15px 60px;
+  margin-top: 50px;
+  background: #f0f0f0;
+}
+footer p {
+  margin: 0;
+  font-size: 16px;
+}
+footer p + p {
+  margin-top: 1em;
+}
+
+.author {
+  box-sizing: border-box;
+  position: relative;
+  padding-right: 120px;
+}
+.author .frame img {
+  width: 100%;
+  height: 100%;
+}
+.author .frame {
+  border: 2px solid #ccc;
+  display: block;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 60px;
+}
+
+
+.book {
+  margin-bottom: 70px;
+}
+
+.book {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: 'b a a a a'
+                       'b c c c c'
+                       'b d d d d'
+                       'b x x x x';
+  grid-gap: 10px;
+}
+
+.book .cover img {
+  border: 1px solid #ccc;
+  max-width: 120px;
+}
+.book .cover a:hover img {
+  border: 1px solid #555;
+}
+.book p {
+  margin: 0;
+}
+
+.book .links {
+  grid-area: d;
+}
+.book .links a {
+  margin-right: 20px;
+}
+
+.book .title {
+  grid-area: a;
+  margin: 0;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.book .cover {
+  grid-area: b;
+}
+
+.book .about {
+  grid-area: c;
+}
+
+.book .date {
+  font-size: 14px;
+  margin-bottom: 0.5em;
+  margin-top: -4px;
+  font-weight: 400;
+  color: #777;
+}
+
+

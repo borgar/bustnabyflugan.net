@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <meta property="og:locale" content="{{ DEFAULT_LOCALE }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Bækur Bústnu býflugunnar" />
+  <meta property="og:description" content="Bústna býflugan hefur verið viðriðin bókagerð frá árinu 1980, þá hjá KÍM bókaútgáfu. Hún hefur starfað undir eigin merki frá 1997." />
+  <meta property="og:url" content="{{ SITE_URL }}" />
+  <meta property="og:site_name" content="{{ SITE_TITLE }}" />
+  <meta property="og:updated_time" content="{{ UPDATE_TIME }}" />
+  <meta property="og:image" content="{{ SITE_URL }}/assets/logo.png" />
+
+  <title>Bækur Bústnu býflugunnar</title>
+</head>
+<body>
+
+<header>
+  <h1>Bækur Bústnu býflugunnar</h1>
+  <p>Bústna býflugan hefur verið viðriðin bókagerð frá árinu 1980, þá hjá KÍM bókaútgáfu. Hún hefur starfað undir eigin merki frá 1997.</p>
+  <hr />
+  <p>Bækurnar eru allar fáanlegar hér og hjá <a href="https://www.haskolaprent.is/">Háskólaprenti</a>.</p>
+</header>
+
+  <main class="books">
+
+    {% for book in books %}
+    <div class="book">
+      <h3 class="title">{{ book.title }}</h3>
+      <span class="cover">
+        {% if book.pdf %}
+        <a class="read" href="./{{ book.slug }}.html"><img src="books/{{ book.slug }}/cover.png" /></a>
+        {% else %}
+        <img src="books/{{ book.slug }}/cover.png" />
+        {% endif %}
+      </span>
+      <div class="about">
+        <p class="date">Útgefin: {{ book.date|format('yyyy') }}</p>
+        <p class="blurb">{{ book.blurb }}</p>
+      </div>
+      <p class="links">
+        {% if book.pdf %}
+        <a class="read" href="./{{ book.slug }}.html">
+          <span class="icon">menu_book</span>
+          Lesa á vef
+        </a>
+        <a class="download" href="books/{{ book.slug }}/{{ book.pdf }}">
+          <span class="icon">download</span>
+          Sækja PDF
+        </a>
+        {% endif %}
+      </p>
+    </div>
+    {% else %}
+    <p>Engar bækur fundust</p>
+    {% endfor %}
+
+  </main>
+
+  <footer>
+    <div class="author">
+      <span class="frame">
+        <img src="assets/author.jpg" />
+      </span>
+
+      <p><strong>Þorsteinn Úlfar</strong> er löggilt gamalmenni sem neitar að eldast mikið fram yfir 14 ára aldurinn. Funga er 10. bókin sem hann semur. Hann hefur starfað sem kvikmyndagerðarmaður, umbrotsmaður, legsteinahönnuður, í trésmíði og járnsmíði ásamt sveitavinnu á unglingsárunum.</p>
+
+      <p>Hann hefur alltaf verið upptekinn af gróðri og náttúrunni og bækur hans hafa fjallað um gróður og náttúru þótt óbeint sé og fyrstu tvær bækur hans eru einmitt þannig. Hann fékk áhuga á vímuefnum og menningarbundinni notkun þeirra í gegnum gróðurinn því velflest vímuefni koma úr flórunni.</p>
+
+      <p>Hann er kvæntur og á fjögur börn og tvö barnabörn og á heima í Reykjavík.</p>
+
+      <hr />
+
+      <p>Þeir sem hafa hug á prentuðu eintaki geta haft samband við höfund á netfanginu <a href="mailto:steini@vortex.is">steini@vortex.is</a> eða <a href="https://www.haskolaprent.is/">Háskólaprent</a>.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
