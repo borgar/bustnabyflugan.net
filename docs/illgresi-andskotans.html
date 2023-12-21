@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Illgresi and­skotans - Read online</title>
+
+  <meta property="og:locale" content="" />
+  <meta property="og:type" content="book" />
+  <meta property="book:author" content="Þorsteinn Úlfar Björnsson" />
+  <meta property="book:isbn" content="978-9935-9444-4-3" />
+  <meta property="book:release_date" content="2022-01-01" />
+  
+
+  <meta property="og:title" content="Illgresi and­skotans" />
+  <meta property="og:description" content="Illgresi andskotans fjallar um plöntuna hamp Cannabis sativa L. Þetta er ekki bók um vímuefni heldur verð­mæta nytja­plöntu. Gífurleg fjöl­hæfni einkennir hana og sem betur fer er við­horfið gagnvart henni að breytast." />
+  <meta property="og:url" content="http://bustnabyflugan.net/books/illgresi-andskotans.html" />
+  <meta property="og:site_name" content="Bústna býflugan" />
+  <meta property="og:updated_time" content="Sat Jan 01 2022 00:00:00 GMT+0000 (Greenwich Mean Time)" />
+  <meta property="og:image" content="http://bustnabyflugan.net/books/illgresi-andskotans/cover.png" />
+
+  <link rel="stylesheet" type="text/css" href="pagerFiles/app.css">
+  <script type="module">
+    import { pager } from './pagerFiles/pager.js';
+
+    function onError (msg) {
+      const main = document.querySelector('#main');
+      main.classList.add('error');
+      const error = document.querySelector('#error_message');
+      error.innerHTML = 'Error: ' + msg;
+    }
+
+    const params = new URLSearchParams(location.search);
+    const backLink = params.get('back') || '.';
+    if (backLink) {
+      const backURL = new URL(backLink, location);
+      document.querySelector('#nav_back')
+        .innerHTML = `<a href="${backURL}">← Back</a>`;
+    }
+    else {
+      document.querySelector('#nav_back').innerHTML = '';
+    }
+
+    const bookSrc = String(new URL(`./books/illgresi-andskotans/book.json`, location));
+    try {
+      await pager(bookSrc);
+    }
+    catch (err) {
+      onError('Invalid book info');
+    }
+  </script>
+</head>
+<body>
+
+<div id="navbar">
+  <span id="nav_back"></span>
+
+  <span id="nav_title_wrap">
+    <span id="nav_title"></span>
+    <!--
+    <button id="nav_download">
+      <svg class="icon" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <use xlink:href="#icon-download"></use>
+      </svg>
+    </button>
+    -->
+  </span>
+
+  <button id="page_number">
+  </button>
+</div>
+
+<div id="page_progress_wrap">
+  <div id="page_progress" style="width: 0%"></div>
+</div>
+
+<div id="main">
+
+  <div id="pager">
+    <button id="pager_prev"><span class="pad">
+      <svg class="icon" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <use xlink:href="#icon-prev"></use>
+      </svg>
+    </span></button>
+    <button id="pager_next"><span class="pad">
+      <svg class="icon" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <use xlink:href="#icon-next"></use>
+      </svg>
+    </span></button>
+    <button id="pager_first"><span class="pad">
+      <svg class="icon" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <use xlink:href="#icon-first"></use>
+      </svg>
+    </span></button>
+    <button id="pager_last"><span class="pad">
+      <svg class="icon" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <use xlink:href="#icon-last"></use>
+      </svg>
+    </span></button>
+  </div>
+
+  <div id="error_message">Error: Unable to display book</div>
+
+  <div id="viewport">
+    <div id="page_wrap" class="onePage">
+      <div class="page_pair" id="pages_current">
+        <div class="pwrap">
+          <div class="page left" id="pages_current_0">
+            <img class="thumb" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+            <svg class="loader" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#loading"></use></svg>
+            <img class="image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+            <svg class="pageText"></svg>
+          </div>
+          <div class="page right" id="pages_current_1">
+            <img class="thumb" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+            <svg class="loader" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#loading"></use></svg>
+            <img class="image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+            <svg class="pageText"></svg>
+          </div>
+        </div>
+      </div>
+      <div class="page_pair" id="pages_next">
+        <div class="pwrap">
+          <div class="page left" id="pages_next_0">
+            <img class="thumb" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+            <svg class="loader" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#loading"></use></svg>
+            <img class="image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+            <svg class="pageText"></svg>
+          </div>
+          <div class="page right" id="pages_next_1">
+            <img class="thumb" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+            <svg class="loader" xmlns:xlink="http://www.w3.org/1999/xlink"><use xlink:href="#loading"></use></svg>
+            <img class="image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+            <svg class="pageText"></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<svg style="width: 0; height: 0; visibility: hidden; pointer-events: none;">
+  <symbol id="icon-menu" viewBox="0 0 24 24">
+    <path fill="currentColor"
+      d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+  </symbol>
+  <symbol id="icon-last" viewBox="0 0 24 24">
+    <path fill="currentColor"
+      d="M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6zM16 6h2v12h-2z" />
+  </symbol>
+  <symbol id="icon-first" viewBox="0 0 24 24">
+    <path fill="currentColor"
+      d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z" />
+  </symbol>
+  <symbol id="icon-info" viewBox="0 0 24 24">
+    <path fill="currentColor"
+      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+  </symbol>
+  <symbol id="icon-download" viewBox="0 0 24 24">
+    <path fill="currentColor"
+      d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+  </symbol>
+  <symbol id="icon-prev" viewBox="0 0 24 24">
+    <path fill="currentColor"
+      d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+  </symbol>
+  <symbol id="icon-next" viewBox="0 0 24 24">
+    <path fill="currentColor"
+      d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+  </symbol>
+  <symbol id="loading" viewBox="0 0 100 100">
+    <path fill="#aaa" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="360 50 50" repeatCount="indefinite"></animateTransform>
+    </path>
+  </symbol>
+</svg>
+
+</body>
+</html>
