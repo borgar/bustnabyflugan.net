@@ -37,9 +37,9 @@
       <h3 class="title">{{ book.title }}</h3>
       <span class="cover">
         {% if book.pdf %}
-        <a class="read" href="./{{ book.slug }}.html"><img src="books/{{ book.slug }}/cover.png" /></a>
+        <a class="read" href="./{{ book.slug }}.html"><img src="books/{{ book.slug }}/{{ book.cover }}" /></a>
         {% else %}
-        <img src="books/{{ book.slug }}/cover.png" />
+        <img src="books/{{ book.slug }}/{{ book.cover }}" />
         {% endif %}
       </span>
       <div class="about">
