@@ -34,7 +34,7 @@
 
     {% for book in books %}
     <div class="book">
-      <h3 class="title">{{ book.title }}</h3>
+      <h3 class="title"><a class="read" href="./{{ book.slug }}.html">{{ book.title }}</a></h3>
       <span class="cover">
         {% if book.pdf %}
         <a class="read" href="./{{ book.slug }}.html"><img src="books/{{ book.slug }}/{{ book.cover }}" /></a>
