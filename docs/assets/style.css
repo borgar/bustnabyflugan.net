@@ -147,6 +147,9 @@ footer p + p {
   font-weight: 500;
   line-height: 1;
 }
+.book .title a {
+  color: inherit;
+}
 
 .book .cover {
   grid-area: b;
