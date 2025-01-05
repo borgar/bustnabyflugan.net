@@ -19,6 +19,17 @@
   <meta property="og:updated_time" content="{{ UPDATE_TIME }}" />
   <meta property="og:image" content="{{ SITE_URL }}/assets/logo.png" />
 
+  {% if GTAG %}
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ GTAG }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ GTAG }}');
+  </script>
+  {% endif %}
+
   <title>Bækur Bústnu býflugunnar</title>
 </head>
 <body>
